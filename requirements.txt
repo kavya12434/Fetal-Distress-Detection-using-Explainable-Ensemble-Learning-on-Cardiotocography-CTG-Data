@@ -1,0 +1,18 @@
+# FastAPI inference backend for the fetal health CTG classifier.
+# Web layer
+fastapi==0.141.1
+uvicorn==0.53.0
+pydantic==2.13.5
+# HTTP client for the local Ollama chat endpoint (CB1). Not pulled in by
+# FastAPI itself, so it is pinned explicitly here.
+httpx==0.28.1
+
+# Inference + explainability (must match the versions the models were trained
+# and pickled with; see the project-root requirements.txt).
+scikit-learn==1.9.1
+xgboost==2.1.4
+shap==0.52.0
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+joblib==1.6.0
